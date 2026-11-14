@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Ryan Jung
+- **Dot Number**: jung.866
+- **Due Date**: 2026-11-13
 
 ## Assignment Overview
 
@@ -49,8 +49,6 @@ Many of these additional techniques are somewhat out of the scope of this
 course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -140,8 +138,6 @@ merges, you will need to pull the changes from main into your current branch
 to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -307,18 +303,23 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+Because I chose the topic myself (a playlist), I could feel the requirements firsthand, for example, the things that bothered me in everyday use, and the features I took for granted until they were missing.
+Therefore, my programming skills improved, of course, but I think I learned even more about design.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+I can just use the functions I use often, but I can’t remember the rest, so I usually look them up in the API library.
+While writing this code and especially starting the project, I had no idea how to get started.
+And because I looked things up, it took much longer than I expected.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+Honestly, when I finished, it felt more like finishing one assignment than finishing a project of my own.
+When I first picked the sample songs for the playlist it was fun, but maybe the project felt less real because there was no physical result I made.
+Still, based on this experience, I wonder what it would be like to build a website where I can save the songs I like and share them easily with others. (Of course, such sites already exist. https://plick.kr/)
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,29 +327,39 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Through CSE 2231, not just this project, I realized how useful GitHub is.
+I foolishly forgot to commit and could have lost work, but I can’t think of a more useful tool.
+I also learned how to build things up from one small piece at a time.
+Someone once told a person who thought development looked fun that development is like building a house one block at a time, and now I understand what they meant.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Designed and implemented a Java component (Playlist) using the OSU software sequence discipline: kernel and enhanced interfaces, an abstract class, and a kernel implementation.
+- Applied design by contract, writing preconditions and postconditions for every method and checking them with assertions.
+- Built a systematic JUnit 4 test suite of 100 tests covering constructor, kernel, Standard, and secondary methods.
+- Used Git and GitHub for branching, commits, and pull requests. !!!
+- Learned to read API documentation and teach myself unfamiliar libraries and tools. !!
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This project gave me a lot of hardships, but I think I actually came out liking software development more.
+Even if I specialize in AI or cybersecurity, I want to combine that field with software development to build something,
+connecting it to hobbies I know well is especially fun.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+Following university classes well is one way to grow, but through this project I felt that it is too passive.
+Building something myself that connects to my hobbies or work helped me improve much more.
+So next, I want to build something, such as a website that share playlist based on this project, software that organizes my stock portfolio (my hobby) by return, time, and number of holdings, or a website with game information that many people can view. Just imagining it sounds fun (though actually working on it might not be).
+As for mentors, I’m not sure. Maybe seniors who have studied more than me, or AI?
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -383,8 +394,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull

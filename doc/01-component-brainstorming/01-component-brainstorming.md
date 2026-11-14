@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Ryan Jung
+- **Dot Number**: jung.866
+- **Due Date**: 2026-11-13
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +98,11 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+These days, I am interested in cyber security, and building practical tool such as daily todo app or schedule for efficiency.
+But outside the class, I enjoy board games, tracking stock market, listening large spectrum of musics, and playing games.
+So, first time I heard about this project, I planned to make my music playlist or organized list of stock.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +110,7 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
+
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -142,8 +130,6 @@ list-like components that have different ways of manipulating the data. Think
 about different ways you might allow a client to manipulate your component.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +197,88 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Models an ordered music playlist. Each song has a title, an artist, and a duration in seconds. The kernel only stores songs in order and lets a client add songs to the back or take them from the front. Listening and organizing behaviors (shuffle, skip, total length, etc) are layered on top in the secondary interface.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void addSong(Song s): add s to the back of this
+    - Song removeFirst(): removes and returns the song at the front of this
+    - int length(): reports the number of songs in this
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void skip(): moves the front song to the back of this
+    - void shuffle(): randomly reorders the songs in this
+    - void reverse(): reverses the order of the songs in this
+    - boolean containsTitle(String title): reports whether a song with this title exists
+    - int totalDuration(): reports the total duration of all songs in seconds
+    - void appendPlaylist(Playlist other): moves all songs of other onto the back of this
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, clear, newInstance, and transferFrom mutate this, and addSong/removeFirst change the playlist.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, a small song class/record holding title, artist, and duration
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - maybe enum for repeat, for example, off, all, one.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, skip is removeFirst followed by addSong. totalDuration can cycle through all length() songs once.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Budget
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Models a simple personal budget as a collection of expenses, each with a category and an amount in dollars. The kernel handles recording and removing expenses. Reporting and analysis (totals, largest category, etc) are secondary methods.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void addExpense(String category, int cents): records an expense in this
+    - Expense removeAny(): removes and returns an arbitrary expense from this
+    - int size(): reports the number of expenses in this
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - int totalFor(String category): total cents spent in category
+    - int total(): total cents spent across all expenses
+    - String largestCategory(): category with the highest total spending
+    - boolean isOverLimit(int limitCents): reports whether total() exceeds the limit
+    - void merge(Budget other): moves all expenses from other into this
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, expenses are added and removed, and the standard methods mutate this.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, an expense pair of (category, dollars), similar to Map.Pair.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Possibly a constant for the currency unit (cents per dollar = 100).
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes because total removes every expense with removeAny, sums the cents, and restores them into a temporary Budget.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: StockPortfolio
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Models a personal stock portfolio. A collection of holdings, each with a ticker symbol and a number of shares. The component does not fetch live market data. Instead, the client passes in prices when a value is needed. The kernel only records and removes holdings. Summaries such as total value, largest holding, and checks are secondary methods.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void addHolding(String ticker, int shares): adds a holding to this
+    - Holding removeAny(): removes and returns an arbitrary holding from this
+    - int size(): reports the number of holdings in this
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - int sharesOf(String ticker): total shares held across all holdings of ticker
+    - int totalShares(): total shares across the whole portfolio
+    - int totalValue(Map<String, Integer> pricesInCents): portfolio value in cents given a price for each ticker
+    - String largestHolding(Map<String, Integer> pricesInCents): ticker with the highest market value
+    - boolean isDiversified(int minTickers): reports whether at least minTickers distinct tickers are held
+    - void merge(StockPortfolio other): moves all holdings from other into this
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, holdings are added and removed, and the Standard methods mutate this.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, a holding pair of (ticker, shares). Prices come in as an OSU Map
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - A constant for cents per dollar maybe.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, sharesOf and totalShares drain the portfolio with removeAny, and restore the holdings. totalValue does the same and multiplies shares by the price from the map.
 
 ## Post-Assignment
 
@@ -280,8 +286,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -299,13 +303,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## YYYY.MM.DD
+## 2026.11.13
 
 ### Added
 
-- Designed a <!-- insert name of component 1 here --> component
-- Designed a <!-- insert name of component 2 here --> component
-- Designed a <!-- insert name of component 3 here --> component
+- Designed a Playlist component
+- Designed a Budget component
+- Designed a StockPortfolio component
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -320,8 +324,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -330,11 +332,7 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
-
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -360,8 +358,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/

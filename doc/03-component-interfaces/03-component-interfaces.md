@@ -1,8 +1,8 @@
 # Portfolio Part 3: Component Interfaces
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Ryan Jung
+- **Dot Number**: jung.866
+- **Due Date**: 2026-11-13
 
 ## Assignment Overview
 
@@ -43,8 +43,6 @@ component to be able to do? Now that you've had a chance to create a
 proof-of-concept, you should be able to answer this question to some extent.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -96,7 +94,7 @@ do good work.
 
 Below is further rationale/explanation for the rubric items above:
 
-1. Because these assignments bui0ld on each other, it's important
+1. Because these assignments build on each other, it's important
    to acknowledge the growth and development of your work. Therefore, you must
    show what has been changed following the proof-of-concept as it pertains
    to the interface design.
@@ -132,7 +130,37 @@ hierarchy diagram using whatever tools you would like. Then, include a picture
 of it in this folder. You may also embed it just below using markdown syntax
 (i.e., `![ALT TEXT](path/to/file)`).
 
-<!-- TODO: make a diagram of your component hierarchy then delete this comment -->
+                    |      Standard<Playlist>   |     (OSU interface)
+                    |  clear, newInstance,      |
+                    |  transferFrom             |
+                                  ^
+                                  | extends
+                    |      PlaylistKernel       |     kernel interface
+                    |  addSong, removeFirst,    |
+                    |  length, enum Theme       |
+                                  ^
+                                  | extends
+                    |         Playlist          |     enhanced interface
+                    |  skip, shuffle, reverse,  |
+                    |  containsTitle,           |
+                    |  totalDuration,           |
+                    |  appendPlaylist, countOf, |
+                    |  durationOf, extractTheme,|
+                    |  skipToTheme              |
+                                  ^
+                                  | implements
+                    |     PlaylistSecondary     |     abstract class
+                    |  implements the enhanced  |
+                    |  methods using only the   |
+                    |  kernel methods           |
+                                  ^
+                                  | extends
+                    |        Playlist1L         |     kernel implementation
+                    |  implements the kernel    |
+                    |  methods (e.g., on a      |
+                    |  Queue<Song>)             |
+
+   Song (record) is a separate helper type used by both interfaces.
 
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my
@@ -153,8 +181,6 @@ merges, you will need to pull the changes from main into your current branch
 to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -212,7 +238,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -249,7 +274,7 @@ that your feedback is both helpful and respectful (you may want to render the
 markdown as HTML or a PDF to read this rubric as a table).
 
 | Criteria of Constructive Feedback | Missing | Developing | Meeting |
-| --------------------------------- | ------- | ---------- |v ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------------------------- | ------- | ---------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Specific                          | All feedback is general (not specific)                                                                                            | Some (but not all) feedback is specific and some examples may be provided.                                                                                                                                                                | All feedback is specific, with examples provided where possible                                                                                                       |
 | Actionable                        | None of the feedback provides actionable items or suggestions for improvement                                                     | Some feedback provides suggestions for improvement, while some do not                                                                                                                                                                     | All (or nearly all) feedback is actionable; most criticisms are followed by suggestions for improvement                                                               |
 | Prioritized                       | Feedback provides only major or minor concerns, but not both. Major and minar concerns are not labeled or feedback is unorganized | Feedback provides both major and minor concerns, but it is not clear which is which and/or the feedback is not as well organized as it could be                                                                                           | Feedback clearly labels major and minor concerns. Feedback is organized in a way that allows the reader to easily understand which points to prioritize in a revision |
@@ -261,8 +286,6 @@ markdown as HTML or a PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [natural-number-kernel]: https://cse22x1.engineering.osu.edu/common/doc/src-html/components/naturalnumber/NaturalNumberKernel.html
 [natural-number]: https://cse22x1.engineering.osu.edu/common/doc/src-html/components/naturalnumber/NaturalNumber.html

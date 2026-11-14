@@ -1,12 +1,10 @@
 # Portfolio Part 2: Component Proof-of-Concept
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Ryan Jung
+- **Dot Number**: jung.866
+- **Due Date**: 2026-11-13
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 Previously, you brainstormed three ideas, and hopefully you got some feedback as
 well. However, it's impossible to know how reasonable your design actually is
@@ -30,7 +28,6 @@ the more work you can put in now, the better.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -53,8 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -68,7 +63,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -116,6 +110,7 @@ Below is further rationale/explanation for the rubric items above:
 
 <!-- TODO: briefly argue your choice of design or design something
 new; then delete this comment -->
+I chose the Playlist design because I know I listen to many kinds of music(POP, K-pop, J-pop, EDM, game soudntracks, classic, rock, and more), so I know what I would want from a playlist tool and can tell whether the component is useful. It also fits the kernel-secondary split well because the kernel only adds songs to the back, removes from the front, and reports the length, while skip, shuffle, reverse, loop, and the others are build on top of those three. Budget and StockPortfolio looked safe to finish because they depend on removeAny and on prices passed in as maps. However, later on, I want to make both of those so that both reflect real-world prices allowing me to actually use them.
 
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
@@ -126,7 +121,6 @@ new; then delete this comment -->
 > we'll want a branch that you can later make a pull request from with all
 > your changes.
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -153,7 +147,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -188,8 +181,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
 request of all your changes. Pull requests are pretty easy to make if you're
@@ -210,8 +201,6 @@ recommend keeping the pull request open until at least a peer has had a chance
 to look over your changes. Otherwise, you defer needed changes to later pull
 requests, which could sacrifice the overall quality of your work or result in
 major rework.
-
-<!-- TODO: paste the URL to Carmen then delete this comment -->
 
 ### Peer Review
 
